@@ -63,7 +63,6 @@ body {
     width: 100%;
     padding: 30px;
     background-color: #7c5624; /* Brown background color */
-    margin-bottom: 300px;
 }
 
 .header-left {
@@ -90,6 +89,8 @@ body {
     border-left: 2px black ; /* Creates the vertical line */
     height: 120px;
     margin-left: 35px;
+    margin-top: 0px auto;
+    margin-bottom: 300px;
   }
   
 
