@@ -356,3 +356,13 @@ body {
 .text-container:hover ~ .background {
     transform: scale(150px); /* Slightly zoom in the background */
 }
+
+/* header subtitle */
+.header-title-1 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #E8E5DA; /* Light color for contrast */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
