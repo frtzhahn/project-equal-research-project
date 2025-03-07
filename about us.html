@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Web Developers | Project Equal</title>
+    <link rel="stylesheet" href="about us.css"> 
+</head>
+    <div class="background"></div>
+
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="10.png" alt="About us Logo" class="header-logo">
+            <h1 class="header-title">About <br> Us </h1>
+            <hr class="vertical-hr">
+        </div>
+        <div class="header-right">
+            <a href="index.html"><button class="header-button">Return to Homepage</button></a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- WEb DEVELOPER TEAM -->
+
+    <div class="content-section scroll-effect">
+        <h2>Web Developer Team of Project Equal </h2>
+        <div class="more-info">
+            <p>
+                If you have any questions about this website, feel free to contact our team below 👨‍💻</p>
+                <p style=" text-align: justified;">
+                    📧 liohaym@gmail.com <br>
+                    📧 3ighmon@gmail.com <br>
+                    📧 arronalbes03@gmail.com<br>
+                    📧 janpatrickespe@gmail.com <br>
+                    <br>
+                    <br>
+                    <i> For more Information about the Web Development Team you can click the Profile Pictures below </i>
+            </p>
+        </div>
+        </div>
+
+        <div class="team-container">
+            <button class="nav-button prev" onclick="prevMember()">&#10094;</button>
+            <div class="team-members">
+                <div class="member active">
+                    <a href="https://web.facebook.com/aldrin.alciso.2024#"> 
+                    <img src="a1.png" alt="Full Stack Developer"></a>
+                    <div class="label">Full Stack Developer & Leader of <br>
+                        Project Equal Research Project</div>
+                </div>
+                <div class="member">
+                    <a href="https://web.facebook.com/eighmonsebastian.fajardo#">
+                    <img src="a2.png" alt="Graphic Designer 1"> </a>
+                    <div class="label">Graphics Designer & Assistant Leader of<br>
+                    Project Equal Research Project</div>
+                </div>
+                <div class="member">
+                    <a href="https://web.facebook.com/arronalbes03#"> 
+                    <img src="a3.png" alt="Graphic Designer 2"></a>
+                    <div class="label">Graphics Designer & Member of <br>
+                        Project Equal Research Project
+                    </div>
+                </div>
+                <div class="member">
+                    <a href="https://web.facebook.com/janpatrick.espe.3#">
+                    <img src="a4.png" alt="Graphic Designer 3"> </a>
+                    <div class="label">Graphics Designer & Member of <br>
+                        Project Equal Research Project</div>
+                </div>
+            </div>
+            <button class="nav-button next" onclick="nextMember()">&#10095;</button>
+        </div>
+
+        
+    <script>
+            
+        // Scroll animation for content sections
+        document.addEventListener("scroll", function () {
+           const elements = document.querySelectorAll(".scroll-effect");
+           elements.forEach((el) => {
+               const rect = el.getBoundingClientRect();
+               if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+                   el.classList.add("show");
+                   el.classList.remove("hide");
+               } else {
+                   el.classList.remove("show");
+                   el.classList.add("hide");
+               }
+           });
+       });
+   
+       // this  is for the header fade in and fade out functions
+       document.addEventListener("DOMContentLoaded", function () {
+       const headers = document.querySelectorAll(".header-1"); // Select all headers
+   
+       const observer = new IntersectionObserver(
+           (entries) => {
+               entries.forEach((entry) => {
+                   if (entry.isIntersecting) {
+                       entry.target.classList.add("visible");
+                       entry.target.classList.remove("hidden");
+                   } else {
+                       entry.target.classList.add("hidden");
+                   }
+               });
+           },
+           { threshold: 0.35 } // Adjust this value for earlier/later fade effects
+       );
+   
+       headers.forEach((header) => observer.observe(header)); // Observe each header
+   });
+
+//    buttons for WEB DEVELOPERS
+
+let currentIndex = 0;
+        const members = document.querySelectorAll(".member");
+        
+        function showMember(index) {
+            members.forEach((member, i) => {
+                member.classList.toggle("active", i === index);
+            });
+        }
+
+        function prevMember() {
+            currentIndex = (currentIndex - 1 + members.length) % members.length;
+            showMember(currentIndex);
+        }
+
+        function nextMember() {
+            currentIndex = (currentIndex + 1) % members.length;
+            showMember(currentIndex);
+        }
+   
+           </script>
+
+</body>
+</html>
