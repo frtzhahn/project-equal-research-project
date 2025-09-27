@@ -1,1 +1,1 @@
-# project-equal
+This project aims to contibute on 3 of the 17 sustainable development goals providing an open source of education in which objects to enable a more effective learning from the students of meycauyan national high school. This project is commited to create an new impactful and reliable way of learning, and this prototype website will serve as a stepping stone for future researchers in this field 
